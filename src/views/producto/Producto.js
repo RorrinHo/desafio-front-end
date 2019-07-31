@@ -12,7 +12,7 @@ export default class Header extends React.Component {
   }
 
   callAPISku(sku) {    
-    fetch(`http://localhost:8181/catalogo/${sku}`)
+    fetch(`https://desafio-back-end.herokuapp.com//catalogo/${sku}`)
       .then(response => response.json())
       .then(data => this.setState({ producto: data.producto }))
       .catch(err => err);

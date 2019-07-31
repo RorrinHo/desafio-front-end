@@ -13,7 +13,7 @@ export default class Catalogo extends React.Component {
   }
 
   callAPI() {
-    fetch("http://localhost:8181/catalogo")
+    fetch("https://desafio-back-end.herokuapp.com/catalogo")
       .then(response => response.json())
       .then(data => this.setState({ productos: data.productos }))
       .catch(err => err);
