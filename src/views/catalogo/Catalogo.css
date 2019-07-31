@@ -1,0 +1,12 @@
+.Catalogo-image {
+    width: 100%;
+}
+
+.Catalog-center {
+  text-align: center;
+}
+
+.Catalogo-link {
+  text-decoration: none !important;
+  color: inherit !important;
+}

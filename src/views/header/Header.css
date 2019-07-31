@@ -1,0 +1,9 @@
+.Header {
+    background: #5B4178;
+}
+
+.Header-logo {
+    width: 55%;
+    display:block;
+    margin:auto;
+}
