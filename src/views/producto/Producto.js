@@ -11,8 +11,11 @@ export default class Header extends React.Component {
     };
   }
 
-  callAPISku(sku) {    
-    fetch(`https://desafio-back-end.herokuapp.com//catalogo/${sku}`)
+  callAPISku(sku) {
+      
+    const urlBack = (process.env.URL_BACK_END) ? process.env.URL_BACK_END : 'localhost:8181';
+    
+    fetch(`${urlBack}/catalogo/${sku}`)
       .then(response => response.json())
       .then(data => this.setState({ producto: data.producto }))
       .catch(err => err);
