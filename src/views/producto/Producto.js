@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button  } from 'reactstrap';
 import { Link } from 'react-router-dom';
-
+require('dotenv').config();
 export default class Header extends React.Component {
 
   constructor(props) {
