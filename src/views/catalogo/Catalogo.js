@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './Catalogo.css';
+require('dotenv').config();
 
 export default class Catalogo extends React.Component {
   
