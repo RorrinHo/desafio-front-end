@@ -13,7 +13,7 @@ export default class Producto extends Component {
 
   callAPISku(sku) {
     
-    const urlBack = (process.env.REACT_APP_URL_BACK_END) ? process.env.REACT_APP_URL_BACK_END : '';
+    const urlBack = process.env.REACT_APP_URL_BACK_END;
     
     fetch(`${urlBack}/catalogo/${sku}`)
       .then(response => response.json())
