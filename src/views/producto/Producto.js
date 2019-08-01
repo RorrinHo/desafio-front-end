@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button  } from 'reactstrap';
 import { Link } from 'react-router-dom';
-require('dotenv').config();
+
 export default class Header extends React.Component {
 
   constructor(props) {
@@ -12,8 +12,8 @@ export default class Header extends React.Component {
   }
 
   callAPISku(sku) {
-      
-    const urlBack = (process.env.URL_BACK_END) ? process.env.URL_BACK_END : 'localhost:8181';
+    
+    const urlBack = process.env.REACT_APP_URL_BACK_END;
     
     fetch(`${urlBack}/catalogo/${sku}`)
       .then(response => response.json())

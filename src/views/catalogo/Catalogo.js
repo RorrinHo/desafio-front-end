@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './Catalogo.css';
-require('dotenv').config();
 
 export default class Catalogo extends React.Component {
   
@@ -15,7 +14,7 @@ export default class Catalogo extends React.Component {
 
   callAPI() {
 
-    const urlBack = (process.env.URL_BACK_END) ? process.env.URL_BACK_END : 'localhost:8181';
+    const urlBack = process.env.REACT_APP_URL_BACK_END;
 
     fetch(`${urlBack}/catalogo`)
       .then(response => response.json())
