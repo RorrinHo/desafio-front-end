@@ -14,7 +14,9 @@ export default class Producto extends Component {
 
   callAPISku(sku) {
     
-    fetch(`https://desafio-back-end.herokuapp.com/catalogo/${sku}`)
+    const urlBack = process.env.REACT_APP_URL_BACK_END;
+    
+    fetch(`${urlBack}/catalogo/${sku}`)
       .then(response => response.json())
       .then(data => this.setState({ producto: data.producto }))
       .catch(err => err);
