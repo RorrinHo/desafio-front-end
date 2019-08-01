@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './Catalogo.css';
 
-const baseHeroku = 'https://desafio-back-end.herokuapp.com';
+
 
 export default class Catalogo extends React.Component {
   
@@ -16,6 +16,7 @@ export default class Catalogo extends React.Component {
 
   callAPI() {
 
+    const baseHeroku = 'https://desafio-back-end.herokuapp.com';
     const urlBack = (process.env.REACT_APP_URL_BACK_END) ? process.env.REACT_APP_URL_BACK_END : baseHeroku;
 
     fetch(`${urlBack}/catalogo`)
