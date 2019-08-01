@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Button  } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
+const baseHeroku = 'https://desafio-back-end.herokuapp.com';
 export default class Producto extends Component {
 
   constructor(props) {
@@ -13,7 +14,7 @@ export default class Producto extends Component {
 
   callAPISku(sku) {
     
-    const urlBack = process.env.REACT_APP_URL_BACK_END;
+    const urlBack = (process.env.REACT_APP_URL_BACK_END) ? process.env.REACT_APP_URL_BACK_END : baseHeroku;
     
     fetch(`${urlBack}/catalogo/${sku}`)
       .then(response => response.json())
