@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Container, Row, Col, Button  } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-export default class Header extends React.Component {
+export default class Producto extends Component {
 
   constructor(props) {
     super(props);
